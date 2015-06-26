@@ -1,0 +1,14 @@
+option java_package = "com.jeary.proto.model";  
+option java_outer_classname = "MobilePhoneProtos";  
+
+message MobilePhone{    
+    required string brand = 1;
+    required Hardware hardware = 2 [default = ram];
+    repeated string software = 3;
+    
+    enum Hardware {
+        rom = 1; 
+        ram = 2;      
+        size = 3;    
+    }
+}
